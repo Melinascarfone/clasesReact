@@ -1,5 +1,5 @@
 //1) Tener la variable React en scope
-import React from "react" 
+// import React from "react" 
 
 //2) Tener la variable ReactDOM en scope
 import ReactDOM from "react-dom"
