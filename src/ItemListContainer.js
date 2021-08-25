@@ -1,8 +1,8 @@
-const ItemListContainer = ({nombre}) => {
+import ItemCount from "./ItemCount"
+
+const ItemListContainer = () => {
     return(
-        <nav>
-            <h2>{nombre}</h2>
-        </nav>
-    )
+         <ItemCount stock={5} onAdd={(cantidad) => {console.log(cantidad)}} initial={1} />
+    );
 }
 export default ItemListContainer;
