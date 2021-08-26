@@ -1,11 +1,12 @@
 import NavBar from "./NavBar"
 import ItemListContainer from "./ItemListContainer"
+
 const App = () => {
 
     return (
         <>
-         <NavBar/>
-         <ItemListContainer nombre="Productos"/>
+         <NavBar brandName='Libreria Blic'/>
+         <ItemListContainer text='Productos destacados' />
         </>
     )
 }
