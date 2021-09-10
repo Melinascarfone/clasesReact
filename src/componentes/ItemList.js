@@ -1,14 +1,12 @@
 import Item from "./Item"
 
-const ItemList = ({data}) => {
-   return data.length === 0 ?(
-      <h1>cargando...</h1>
-   ) : (
-      <ul>
-         {data.map((elemento) =>(
-            <Item data={elemento} />
-         ))}
-      </ul>
-   ) 
+const ItemList = ({productos}) => {
+  return(
+      <>
+         {productos.map(producto =>{
+            return <Item producto={producto}/>
+         })}
+      </>
+  )
 }
 export default ItemList

@@ -7,7 +7,14 @@ import ReactDOM from "react-dom"
 //3) Tener un elemento de React
 import App from "./App"
 import "./estilo.css"
+
+import {BrowserRouter} from 'react-router-dom'
 //3) Tener un componente React
 
 //4) Tener una funcion render corriendo 
-ReactDOM.render(<App/>,document.getElementById("root"))
+ReactDOM.render(
+<BrowserRouter>
+ <App/>
+</BrowserRouter>
+,document.getElementById("root")
+);

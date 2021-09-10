@@ -1,11 +1,15 @@
-const Item = ({data}) => {
+import { Link } from "react-router-dom";
+
+const Item = ({productos}) => {
 
     return ( 
-        <li key = {data.id}>
-            <h2>{data.nombre}</h2>
-            <h3>{data.precio}</h3>
-        </li>
-     );
+        <div>
+            <h1>{productos.titulo}</h1>
+            <p>{productos.descripcion}</p>
+            <p>{productos.precio}</p>
+            <Link to="/Item/productos.id">Ver mas</Link>
+        </div>
+    )
 }
 
 export default Item;

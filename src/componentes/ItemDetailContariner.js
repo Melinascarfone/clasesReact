@@ -3,26 +3,38 @@ import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
 
-   const [products,setProducts]= useState([]);
-   const URL_API_SHOP = "https://mocki.io/v1/2974d4fc-c558-42fe-8c70-43681d7dc91c";
+   const [producto,setProducto]= useState();
+   // const URL_API_SHOP = "https://mocki.io/v1/19bfe5d0-5f44-49cd-90d5-b70a0567295a";
 
-   useEffect(()=> {
-      fetch(URL_API_SHOP)
-      .then((respuesta)=>{
-         const valor_parseado = respuesta.json();
-         return valor_parseado;
-      })
-      .then((data)=>{
-         const data_filtrada = data.find(elemento => elemento.id === 3)
-         setProducts(data_filtrada)
-      })
-   }, []);
+   // const getProductos = () => {
+   //    fetch(URL_API_SHOP)
+   //    .then(response => response.json())
+   //    .then(response => {
+   //       setProductos(response)
+   //    })
+   // }
+   
+   useEffect(() => {
+      setTimeout(() => {
+         setProducto({titulo:"Producto 1"})
+      }, 2000);
+   }, [])
+
    return(
-      <>
-         <div className="item-container">
-            <ItemDetail data={products}></ItemDetail>
-         </div>
-      </>
+      <ItemDetail producto={producto}/>
    )
+   //    getProductos()
+   // },[])
+   // return(
+   //    productos === 0 ? <div> cargando productos</div> : productos.map(item => {
+   //       return(
+   //       <div>
+   //          <p>{item.nombre}</p>
+   //          <img width='200px' src={item.imagen} alt='' />
+   //          <ItemDetail/>
+   //       </div> 
+   //       )
+   //    })
+   // )
 }
 export default ItemDetailContainer
