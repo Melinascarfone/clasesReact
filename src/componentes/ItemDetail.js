@@ -1,15 +1,25 @@
+import ItemCount from "./ItemCount"
+import { useState } from "react"
 
-const ItemDetail = ({productos}) => {
+const ItemDetail = ({data}) => {
+
+   const [buttonAdd,setButton] = useState('add')
+   const onAdd = (cantidad)=>{
+      addAlert(cantidad)
+      setButton('cart')
+   }
+   const addAlert = (cantidad)=>{
+      alert(cantidad + " x " + data.nombre)
+   }
+
    return(
-      <>
-       <h1>{productos.titulo}</h1>
-      </>
-      // <li key={producto.id}>
-      //    <h2>{producto.nombre}</h2>
-      //    <h3>$ {producto.precio}</h3>
-      //    <p>{producto.descripcion}</p>
-      //    <ItemCount initial={1} stock={5} onAdd={(cantidad) => {console.log(cantidad + " x " + producto.nombre)}} /> 
-      // </li>
-   );
+      <li key={data.id}>
+         <img src={data.img} className="img-detail"/>
+         <h2>{data.nombre}</h2>
+         <span>$ {data.precio}</span>
+         <p>{data.descripcion}</p>
+         <ItemCount initial={1} stock={5} onAdd={onAdd} buttonAdd={buttonAdd} /> 
+      </li>
+   )
 }
 export default ItemDetail; 
