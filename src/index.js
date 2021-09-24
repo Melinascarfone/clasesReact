@@ -1,20 +1,11 @@
-//1) Tener la variable React en scope
-import React from "react" 
+//Tener la var de React en scope
+import React from "react";
+//Tener la var ReactDom en scope
+import  ReactDOM  from "react-dom";
 
-//2) Tener la variable ReactDOM en scope
-import ReactDOM from "react-dom"
+import "./estilos/estilo.css"
+//Tener un elemento React(Componente)
+import App from "./App.js"
 
-//3) Tener un elemento de React
-import App from "./App"
-import "./estilo.css"
-
-import {BrowserRouter} from 'react-router-dom'
-//3) Tener un componente React
-
-//4) Tener una funcion render corriendo 
-ReactDOM.render(
-<BrowserRouter>
- <App/>
-</BrowserRouter>
-,document.getElementById("root")
-);
+//Tener una funcion render corriendo
+ReactDOM.render(<App/>,document.getElementById('root'))

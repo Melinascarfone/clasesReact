@@ -1,19 +1,22 @@
-import NavBar from "./NavBar"
-import ItemListContainer from "./componentes/ItemListContainer"
-import ItemDetailConteiner from "./componentes/ItemDetailContariner"
-import { BrowserRouter, Route, Switch } from "react-router-dom"
-
+import NavBar from "./components/NavBar.js"
+import ItemListContainer from "./components/ItemListContainer.js"
+import ItemDetailContainer from "./components/ItemDetailContainer.js"
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import CustomProvider from "./context/CartContext"
+import Cart from "./components/Cart.js"
 const App = () => {
-
-    return (
-        <BrowserRouter>
-         <NavBar brandName='Libreria Blic'/>
-         <Switch>
-             <Route path="/" component={<ItemListContainer/>} exact/>
-             <Route path="/categoria/:id" component={<ItemListContainer/>} exact/>
-             <Route path="/Item/:id" component={<ItemDetailConteiner/>} exact/>
-         </Switch>
-        </BrowserRouter>
-    )
-}
+   return (
+      <BrowserRouter>
+         <CustomProvider>
+            <NavBar/>
+            <Switch>
+               <Route path="/" component= {ItemListContainer} exact/>
+               <Route path="/category/:catid" component= {ItemListContainer}/>
+               <Route path="/item/:id" component= {ItemDetailContainer}/>
+               <Route path="/cart" component= {Cart}/>
+            </Switch>
+         </CustomProvider>
+      </BrowserRouter>
+   )
+};
 export default App
