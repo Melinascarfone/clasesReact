@@ -40,7 +40,7 @@ const Cart = () =>{
             </div>
             <div className = "row cart-footer_tot">
                <p>Total = ${total}</p>
-               <button className="btn-agregar" onClick={clearAll}>Finalizar Compra</button>
+               <Link to={'/form'}><button className="btn-agregar">Siguiente</button></Link>
             </div>
          </div>
 
