@@ -1,9 +1,9 @@
-import NavBar from "./components/NavBar.js"
-import ItemListContainer from "./components/ItemListContainer.js"
-import ItemDetailContainer from "./components/ItemDetailContainer.js"
+import NavBar from "./componentes/NavBar.js"
+import ItemListContainer from "./componentes/ItemListContainer.js"
+import ItemDetailContainer from "./componentes/ItemDetailContainer.js"
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import CustomProvider from "./context/CartContext"
-import Cart from "./components/Cart.js"
+import CustomProvider from "./contexto/CartContext"
+import Cart from "./componentes/Cart.js"
 const App = () => {
    return (
       <BrowserRouter>

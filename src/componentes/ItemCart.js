@@ -1,7 +1,7 @@
 import ItemCount from "./ItemCount";
 import DeleteWidget from "./DeleteWidget";
 import { useContext } from "react"
-import { context } from "../context/CartContext"
+import { context } from "../contexto/CartContext"
 
 const ItemCart = ({data}) =>{
 

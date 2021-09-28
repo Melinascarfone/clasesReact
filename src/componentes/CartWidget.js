@@ -1,6 +1,6 @@
 import { Link} from "react-router-dom"
 import { useContext, useState, useEffect } from "react"
-import { context } from "../context/CartContext"
+import { context } from "../contexto/CartContext"
 
 const CartWidget = () => {
    const {carrito} = useContext(context)

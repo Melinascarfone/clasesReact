@@ -1,4 +1,4 @@
-import { context } from "../context/CartContext"
+import { context } from "../contexto/CartContext"
 import {  useContext } from "react"
 
 const DeleteWidget = ({data}) => {
